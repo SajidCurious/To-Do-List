@@ -1,0 +1,37 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: rgb(148, 218, 228);
+}
+header{
+    background-color: rgb(64, 168, 203);
+    color: white;
+    text-align: center;
+    padding: 1rem 0rem 1rem 0rem;
+}
+form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0rem 2rem 0rem;
+}
+form #todo-input{
+    border: 1px solid black;
+    border-radius: 1rem;
+    padding-left: 0.5rem;
+    height: 5vh;
+    width: 15vw;
+    font-size: 1rem;
+}
+form #todo-button{
+    height: 4vh;
+    width: 2vw;
+    border-radius: 50%;
+    color: white;
+    background-color: rgb(68, 200, 108);
+    margin: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
