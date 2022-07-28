@@ -6,30 +6,39 @@ const todoList = document.getElementById('todo-list');
 
 // functions
 
-let addTodo = (event) =>{
-    // prevents form from auto submitting
-    event.preventDefault();
+let addTodo = (event) => {
+  // prevents form from auto submitting
+  event.preventDefault();
 
-    // creating a div
-    const todoDiv = document.createElement('div');
-    todoDiv.classList.add('todo');
+  const htmlData = `
+    <div class="final-todo">
+    <li id="newTodo"></li>
+    <div class="buttons">
+    <button class="complete-btn"><i class="fa-solid fa-check"></i></button>
+    <button class="delete-btn"><i class="fa-solid fa-trash-can"></i></button>
+    </div>
+    </div>`;
+  todoList.insertAdjacentHTML('afterbegin', htmlData);
+  let newTodo = document.getElementById('newTodo');
+  newTodo.innerText = todoInput.value;
 
-    const htmlData = `
-    <li id="newtodo"></li>
-    <button id="complete-btn"><i class="fa-solid fa-check"></i></button>
-    <button id="delete-btn"><i class="fa-solid fa-trash-can"></i></button>`;
-  todoDiv.insertAdjacentHTML('afterbegin',htmlData);
-  todoList.appendChild(todoDiv);
+  // clear todoInput value 
+  todoInput.value = "";
+};
 
-   
+// const deleteBtn = document.getElementById('delete-btn');
+let deleteTrash = (e) => {
+  // const finalTodo = document.getElementsByClassName('final-todo');
+  // finalTodo.remove();
+  const item = e.targer;
+  //  delete todo
 
-// Inserting all the above dynamically created html elements inside the todo-list that we created in html file
-todoList.appendChild(todoDiv);
+  // const todo = item.parentElement;
+  todo.remove();
 
-   
-    
 };
 
 // eventlisteners
 
-todoButton.addEventListener('click',addTodo);
+todoButton.addEventListener('click', addTodo);
+todoList.addEventListener('click', deleteTrash);

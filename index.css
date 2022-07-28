@@ -1,81 +1,89 @@
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
 }
-body{
-    background-color: rgb(148, 218, 228);
+body {
+    background: linear-gradient(to right, #00d2ff, #3a7bd5);
 }
-header{
-    background-color: rgb(64, 168, 203);
-    color: white;
-    text-align: center;
-    padding: 1rem 0rem 1rem 0rem;
+header {
+  background-color: rgb(34, 34, 34);
+  color: white;
+  text-align: center;
+  padding: 1rem 0rem 1rem 0rem;
 }
-form{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 2rem 0rem 2rem 0rem;
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0rem 2rem 0rem;
 }
-form #todo-input{
-    border: 1px solid black;
-    border-radius: 1rem;
-    padding-left: 0.5rem;
-    height: 5vh;
-    width: 15vw;
-    font-size: 1rem;
+form #todo-input {
+  border: 1px solid black;
+  border-radius: 1rem;
+  padding-left: 0.5rem;
+  height: 5vh;
+  width: 15vw;
+  font-size: 1rem;
 }
-form #todo-button{
-    height: 4vh;
-    width: 2vw;
-    border-radius: 50%;
-    color: white;
-    background-color: rgb(68, 200, 108);
-    margin: 1rem;
-    cursor: pointer;
-    transition: all 0.3s ease;
+form #todo-button {
+  height: 4vh;
+  width: 2vw;
+  border-radius: 50%;
+  color: white;
+  background-color: rgb(68, 200, 108);
+  margin: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
-.todo-conatainer{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.todo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* flex-direction: row; */
 }
-#todo-list{
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-.todo{
-    background-color: white;
-    min-width: 30vh;
-    margin: 0.5rem;
-    display: flex;
-    justify-content: flex-end;
-    padding: 0.5rem;
-    border-radius: 2rem;
-}
-#complete-btn{
-    color: rgb(64, 170, 64);
 
+#todo-list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
-#complete-btn,#delete-btn{
-    border: none;
-    border-radius: 50%;
-    padding: 0.5rem;
-  }
-#complete-btn:hover{
-    background-color: rgb(64, 170, 64);
-    color: white;
-    cursor: pointer;
+#newTodo {
+  min-width: 30vh;
 }
-#delete-btn {
-    color: orangered;
-  }
+.final-todo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  background-color: white;
+}
+.complete-btn {
+  color: rgb(64, 170, 64);
+}
+.complete-btn,
+.delete-btn {
+  border: none;
+  border-radius: 50%;
+  padding: 0.5rem;
+  margin-left: 0.3rem;
+  /* pointer-events: none; */
+}
+.complete-btn:hover {
+  background-color: rgb(64, 170, 64);
+  color: white;
+  cursor: pointer;
+}
+.delete-btn {
+  color: orangered;
+}
 
-  #delete-btn:hover {
-    background-color: orangered;
-    color: white;
-    cursor: pointer;
-  }
+.delete-btn:hover {
+  background-color: orangered;
+  color: white;
+  cursor: pointer;
+}
