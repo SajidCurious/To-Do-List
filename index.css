@@ -20,20 +20,19 @@ form {
 form #todo-input {
   border: 1px solid black;
   border-radius: 1rem;
-  padding-left: 0.5rem;
-  height: 5vh;
-  width: 15vw;
-  font-size: 1rem;
+  padding-left: 0.8rem;
+  height: 8vh;
+  width: 25vw;
+  font-size: 2rem;
 }
 form #todo-button {
-  height: 4vh;
-  width: 2vw;
   border-radius: 50%;
   color: white;
   background-color: rgb(68, 200, 108);
   margin: 1rem;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.3s ease ;
+  padding: 1rem;
 }
 .todo-container {
   display: flex;
@@ -49,15 +48,16 @@ form #todo-button {
   align-items: center;
   flex-direction: column;
 }
-#newTodo {
+.newTodo {
   min-width: 30vh;
+  font-size: 1.5rem;
 }
 .final-todo {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  margin-bottom: 1rem;
+  margin-top: 1rem;
   padding: 1rem;
   border-radius: 1rem;
   background-color: white;
@@ -86,4 +86,25 @@ form #todo-button {
   background-color: orangered;
   color: white;
   cursor: pointer;
+}
+.completed{
+    text-decoration: line-through;
+    opacity: 0.7;
+    transition:  all 0.8s ease-in-out;
+}
+
+.select{
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+}
+#filter-todo{
+    padding: 0.5rem;
+    border: none;
+    border-radius: 1rem;
+    margin: 0rem 1rem 0rem 1rem;
+    cursor: pointer;
 }
