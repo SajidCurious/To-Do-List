@@ -52,6 +52,9 @@ let addTodo = (event) => {
   completeButton.addEventListener('click', () => {
   div1.classList.toggle('completed');
   });
+
+
+
 };
 
 // declaring filterTodo function
@@ -80,7 +83,7 @@ const filterTodo = (e) =>{
   });
 };
 
-// eventlisteners
 
+// eventlisteners
 todoButton.addEventListener('click', addTodo);
 filterOption.addEventListener('click',filterTodo);
