@@ -1,9 +1,8 @@
-// selelctors
+// selectors
 
 const todoInput = document.getElementById('todo-input');
 const todoButton = document.getElementById('todo-button');
 const todoList = document.getElementById('todo-list');
-const filterOption = document.getElementById('filter-todo');
 
 // functions
 
@@ -46,44 +45,29 @@ let addTodo = (event) => {
   // Deleting a list or defining the deleteTrash function
   deleteButton.addEventListener('click', () =>{
   div1.remove();
+  updateLsData();
   });
 
   // completing the todo task
   completeButton.addEventListener('click', () => {
   div1.classList.toggle('completed');
+  updateLsData();
   });
 
+  // Local Storage
+  const updateLsData = () => {
+    const notes = document.querySelectorAll('.todoList .final-todo');
+    const data = [];
+    notes.forEach((newTodo) => {
+      return data.push(newTodo.innerHTML);
+    });
+    // console.log(notes);
 
+    localStorage.setItem("notes", JSON.stringify(data));
+  };
 
+  completeButton.addEventListener('click',updateLsData);
 };
-
-// declaring filterTodo function
-const filterTodo = (e) =>{
-  const todo = todoList.childNodes;
-  todo.forEach(() =>{
-      switch (e.target.value) {
-        case "all":
-          todo.style.dispay = "flex";
-          break;
-        case "completed":
-          if(todo.classList.contains('completed')){
-          todo.style.dispay = "flex";
-          } else{
-            todo.style.dispay = "none";
-          }
-          break;
-        case "uncompleted":
-          if(!todo.classList.contains('completed')){
-            todo.style.dispay = "flex";
-            } else{
-              todo.style.dispay = "none";
-            }
-          break;
-      }
-  });
-};
-
 
 // eventlisteners
 todoButton.addEventListener('click', addTodo);
-filterOption.addEventListener('click',filterTodo);

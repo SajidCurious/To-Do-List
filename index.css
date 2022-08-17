@@ -3,12 +3,12 @@
   padding: 0;
 }
 body {
-    background: linear-gradient(to right, #00d2ff, #3a7bd5);
+  background: linear-gradient(to right, #536976, #292e49);
 }
 header {
-  background-color: rgb(34, 34, 34);
-  color: white;
+  background: linear-gradient(to right, #16222a, #3a6073);
   text-align: center;
+  color: white;
   padding: 1rem 0rem 1rem 0rem;
 }
 form {
@@ -20,19 +20,23 @@ form {
 form #todo-input {
   border: 1px solid black;
   border-radius: 1rem;
-  padding-left: 0.8rem;
+  padding: 0vh 0.7vw 0vh 0.7vw;
   height: 8vh;
-  width: 25vw;
-  font-size: 2rem;
+  width: 30vw;
+  font-size: 1.5rem;
+  outline: none;
 }
 form #todo-button {
-  border-radius: 50%;
-  color: white;
-  background-color: rgb(68, 200, 108);
+  color: black;
+  background: linear-gradient(to right, #1fa2ff, #12d8fa, #a6ffcb);
   margin: 1rem;
   cursor: pointer;
   transition: all 0.3s ease ;
-  padding: 1rem;
+  padding: 1.8vh 1.2vw 1.8vh 1.2vw;
+  border-radius: 1rem;
+  border: none;
+  font-size: 1rem;
+  font-weight: 700;
 }
 .todo-container {
   display: flex;
@@ -107,4 +111,7 @@ form #todo-button {
     border-radius: 1rem;
     margin: 0rem 1rem 0rem 1rem;
     cursor: pointer;
+}
+::placeholder{
+  font-size: 1.5rem;
 }
